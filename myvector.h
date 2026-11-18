@@ -43,7 +43,7 @@ class MyVector
 		}
 
 		//return allocated memory capacity
-		std::size_t capacity() const 
+		std::size_t capacity() const
 		{
 			return space;
 		}
@@ -106,6 +106,31 @@ class MyVector
 			}
 
 			return element[index];
+		}
+
+		bool empty() const
+		{
+			bool empty = array_size == 0;
+			return empty;
+		}
+
+		void pop_back()
+		{
+			if(!empty())
+			{
+				array_size--;
+				element[array_size].~T();
+				//frees the memory from the datatype but leaves it 
+				//allocated to the vector
+			}
+		}
+
+		void clear()
+		{
+			while(!empty())
+			{
+				pop_back();
+			}
 		}
 };
 

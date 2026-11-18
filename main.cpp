@@ -55,5 +55,60 @@ int main() {
         cout << names.at(i) << endl;
     }
 
+	cout << "PT 2. More Member Functions\n\n";
+
+	MyVector<string> tools;
+
+	tools.push_back("Hammer");
+	tools.push_back("Screwdriver");
+	tools.push_back("Drill");
+	tools.push_back("Leaf Blower");
+	tools.push_back("Wrench");
+
+	cout << "Tools Vector:\n";
+	for(int i = 0; i < tools.size(); i++)
+	{
+		cout << i+1 << ". " << tools.at(i) << "\n";
+	}
+	cout << "\nSize: " << tools.size();
+	cout << "\nCapacity: " << tools.capacity();
+
+	tools.pop_back();
+
+	cout << "\n\nAfter pop_back:\n";
+
+	cout << "Tools Vector:\n";
+        for(int i = 0; i < tools.size(); i++)
+        {
+                cout << i+1 << ". " << tools.at(i) << "\n";
+        }
+        cout << "\nSize: " << tools.size();
+        cout << "\nCapacity: " << tools.capacity();
+
+	tools.clear();
+
+	cout << "\n\nAfter Empty:\n";
+        cout << "Tools Vector:\n";
+        for(int i = 0; i < tools.size(); i++)
+        {
+                cout << i+1 << ". " << tools.at(i) << "\n";
+        }
+        cout << "\nSize: " << tools.size();
+        cout << "\nCapacity: " << tools.capacity();
+
+	tools.push_back("Oscillator");
+	tools.push_back("Hacksaw");
+
+        cout << "\n\nNew Tools Vector:\n";
+        for(int i = 0; i < tools.size(); i++)
+        {
+                cout << i+1 << ". " << tools.at(i) << "\n";
+        }
+        cout << "\nSize: " << tools.size();
+        cout << "\nCapacity: " << tools.capacity();
+
+	cout << "\n\n";
+
+
     return 0;
 }
